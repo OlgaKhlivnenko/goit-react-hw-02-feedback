@@ -6,7 +6,7 @@ class Feedback extends React.Component {
     neutral: 0,
     bad: 0,
     total: 0,
-    positive-feedback: 0,
+    positivefeedback: 0,
   };
   
   goodFeedback = () => {
@@ -30,8 +30,8 @@ class Feedback extends React.Component {
       };
     });
     };
-  countTotalFeedback()
-  countPositiveFeedbackPercentage()
+  // countTotalFeedback()
+  // countPositiveFeedbackPercentage()
     render() {
     return (
       <div>
