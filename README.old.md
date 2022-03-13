@@ -13,6 +13,10 @@ npm run deploy
 
 npm install --save prop-types
 
-npm install --save-dev prettier eslint .prettierc.json { "printWidth": 80, "tabWidth": 2, "useTabs": false, "semi": true, "singleQuote": true, "trailingComma": "all", "bracketSpacing": true, "jsxBracketSameLine": false, "arrowParens": "avoid", "proseWrap": "always" }
+npm install --save-dev prettier husky lint-staged 
 
-npx mrm@2 lint-staged .lintstagedrc { "src//*.{json,css,scss,md}": ["prettier --write"], "src//*.{js,jsx,ts,tsx}": ["prettier --write", "eslint --fix"] } .huskyrc { "hooks": { "pre-commit": "lint-staged" } }
+.prettierc.json { "printWidth": 80, "tabWidth": 2, "useTabs": false, "semi": true, "singleQuote": true, "trailingComma": "all", "bracketSpacing": true, "jsxBracketSameLine": false, "arrowParens": "avoid", "proseWrap": "always" }
+
+ .lintstagedrc { "src//*.{json,css,scss,md}": ["prettier --write"], "src//*.{js,jsx,ts,tsx}": ["prettier --write", "eslint --fix"] } 
+ 
+ .huskyrc { "hooks": { "pre-commit": "lint-staged" } }
